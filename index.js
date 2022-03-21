@@ -18,19 +18,6 @@ morgan.token('post', function (request){
 })
 morgan.format('postFormat',':method :url :status :res[content-length] - :response-time ms :post')
 app.use(morgan('postFormat'))
-// morgan.token('type', function (tokens, req, res) {
-//         // console.log(tokens.req(req,res, 'content-body'))
-//         console.log(req.body)
-//         return [
-//           tokens.method(req, res),
-//           tokens.url(req, res),
-//           tokens.status(req, res),
-//           tokens.res(req, res, 'content-length'), '-',
-//           tokens['response-time'](req, res), 'ms',
-//           JSON.stringify(req.body)
-//         ].join(' ')
-//       } )
-// app.use(morgan('type'))
 
 let persons = [
     { 
